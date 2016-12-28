@@ -32,7 +32,7 @@ OVERVIEW:
 REFERENCES:
 
     Hiep Dang,  Intersection theory with applications to the computation of
-                Gromov-Witten invariants, Ph.D thesis, TU Kaiserslautern, 2013.
+                Gromov-Witten invariants, Ph.D thesis, TU Kaiserslautern, 2014.
 
     Sheldon Katz and Stein A. Stromme, Schubert-A Maple package for intersection
                 theory and enumerative geometry, 1992.
@@ -99,6 +99,7 @@ PROCEDURES:
     SchubertClass(list)                 compute the Schubert classes on a
                                         Grassmannian
     dualPartition(list)                 compute the dual of a partition
+    Pfaffian(list)                      compute Schur Q-polynomials
 
 KEYWORDS:       Intersection theory; Enumerative geometry; Schubert calculus;
                 Bott's formula; Gromov-Witten invariants.
@@ -2558,3 +2559,11 @@ example
     D.ChernCharacter == rankSheaf(D);
     totalChernClass(D) == 1;
 }
+
+proc Pfaffian(list l)
+"USAGE:     Pfaffian(l); l list
+RETURN:     sheaf
+THEORY:     This is a Schur Q-polynomial.
+SEE ALSO:   logg, expp
+EXAMPLE:    example Pfaffian; shows an example
+"
